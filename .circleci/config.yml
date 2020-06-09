@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            docker-compose up -d
+            docker-compose up -d --build
             docker-compose run dockerapp python test.py
       - deploy:
           name: Publis application Docker image
